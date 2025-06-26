@@ -1,6 +1,14 @@
+const dotenv = require('dotenv');
+dotenv.config();
 const express= require('express');
 const path = require('path');
+const port= process.env.port 
 const app = express();
+const mongoose = require('mongoose');
+mongoose.connect(mongo_url)
+.then(()=>{
+    console.log('db connected');
+});
 const cookieParser = require('cookie-parser');
 const gameRoute = require('./src/routes/gameRoutes');
 const adminRoute = require('./src/routes/adminRoute');
@@ -18,6 +26,6 @@ app.get('/', async (req, res)=>{
     const readData = await gameModel.find();
     res.render('home', {readData});
 })
-app.listen(5000, ()=> {
-    console.log('server is running');
+app.listen(port, ()=> {
+    console.log('server is running ',port);
 })

@@ -1,11 +1,6 @@
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/gameBombay_DB')
-.then(()=>{
-    console.log('db connected');
-})
-
 const gameSchema = mongoose.Schema({
   date: String,
   bombay_3pm: String,
