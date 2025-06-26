@@ -4,7 +4,9 @@ const express= require('express');
 const path = require('path');
 const port= process.env.port 
 const app = express();
+const ps = 'gamebombay3 Xp8Fc38Qyv3TvQ4u'
 const mongoose = require('mongoose');
+const mongo_url = process.env.mongo_url;
 mongoose.connect(mongo_url)
 .then(()=>{
     console.log('db connected');
