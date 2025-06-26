@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/show.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logoD">
+            <h2 class="logo">GAME BOMBAY</h2>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td>Date</td>
+                <td>Game 3pm</td>
+                <td>Game 6pm</td>
+                <td>Game 9pm</td>
+                <td>Game 12am</td>
+                <td>Game 6am</td>
+                <td>Controls</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% let store = readData %>
+            <% let reverseArray = store.reverse() %>
+            <% reverseArray.forEach((data)=>{ %>
+            <tr>
+                <td><%= data.date %></td>
+                <td><%= data.bombay_3pm %></td>
+                <td><%= data.bombay_6pm %></td>
+                <td><%= data.bombay_9pm %></td>
+                <td><%= data.bombay_12am %></td>
+                <td><%= data.bombay_6am %></td>
+                <td class="btnED">
+                    <span class="btn"><a href="/api/game/edit/<%= data._id %>">EDIT</a></span>
+                    <span class="btn"><a href="/api/game/delete/<%= data._id %>">DELETE</a></span>
+                </td>
+            </tr>
+        </tbody>
+        <% }) %>
+
+    </table>
+</body>
+</html>

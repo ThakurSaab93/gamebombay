@@ -1,0 +1,88 @@
+*{
+    margin: 0px ;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(130, 129, 138);
+}
+.header{
+    width: 100%;
+    padding: 13px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: orangered; */
+    background-color: rgb(71, 146, 28);
+    margin-bottom: 15px;
+}
+.logo{
+    /* font-family: 'Courier New', Courier, monospace; */
+    padding: 4px 8px;
+    color: rgb(7, 10, 10);
+    font-size: 30px;
+    font-weight: 550;
+    border-radius: 5px;
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    text-shadow: 1px -1px 2px;
+}
+table{
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+thead{
+    /* font-family: 'Courier New', Courier, monospace; */
+    width: 100%;
+    background-color: rgb(71, 146, 28);
+    font-size: 16px;
+    font-weight: 600;
+}
+td{
+    border: 1px solid black;
+}
+tbody{
+   width: 100%;
+   font-size: 12px; 
+   font-weight: normal;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btnED{
+    font-family: serif;
+}
+
+.btn{
+    display: inline-block;
+    border: 1px solid rgb(234, 241, 241);
+    border-radius: 3px;
+    background-color: rgb(22, 21, 20);
+}
+.btn a{
+    text-decoration: none;
+    padding: 0px 10px;
+    color: white;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: capitalize;
+}
+.btn a:hover{
+    background-color: teal;
+    color: black;
+}
+.links{
+    margin: 15px 0;
+    padding: 10px 0;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+.links a{
+    margin: 35px;
+    border-bottom: 1px solid black;
+    color: blue;
+    text-decoration: none;
+
+}

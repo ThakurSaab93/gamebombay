@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+  <link rel="stylesheet" href="/stylesheets/edit.css">
+</head>
+<body>
+  <h2>Edit Here</h2>
+  <form action="/api/game/edit/<%= storeID._id %>" method="post" >
+    <input type="text" name="date" placeholder="Date" value="<%= storeID.date %>">
+    <input type="text" name="bombay_3pm" placeholder="Bombay_3pm" value="<%= storeID.bombay_3pm %>">
+    <input type="text" name="bombay_6pm" placeholder="Bombay_6pm" value="<%= storeID.bombay_6pm %>">
+    <input type="text" name="bombay_9pm" placeholder="Bombay_9pm" value="<%= storeID.bombay_9pm %>">
+    <input type="text" name="bombay_12am" placeholder="Bombay_12am" value="<%= storeID.bombay_12am %>">
+    <input type="text" name="bombay_6am" placeholder="Bombay_6am" value="<%= storeID.bombay_6am %>">
+    <button type="submit">UPDATE</button>
+  </form>
+</body>
+</html>

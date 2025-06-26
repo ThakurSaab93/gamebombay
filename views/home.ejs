@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+<body>
+        <div class="header">
+        <div class="logoD">
+            <h2 class="logo">GAME BOMBAY</h2>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td>Date</td>
+                <td>Game 3pm</td>
+                <td>Game 6pm</td>
+                <td>Game 9pm</td>
+                <td>Game 12am</td>
+                <td>Game 6am</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% let recData= readData %>
+            <% let reverseArray = recData.reverse() %>
+            <% reverseArray.forEach((take)=>{ %>
+                <tr>
+                    <td><%= take.date %></td>
+                    <td><%= take.bombay_3pm %></td>
+                    <td><%= take.bombay_6pm %></td>
+                    <td><%= take.bombay_9pm %></td>
+                    <td><%= take.bombay_12am %></td>
+                    <td><%= take.bombay_6am %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+        
+    </table>
+
+    <!-- <div class="links">
+        <a href="">KASHIPUR  RESULT CHARTS</a><br>
+        <a href="">SHRI GANESH  RESULT CHARTS</a><br>
+        <a href="">FARIDABAAD  RESULT CHARTS</a><br>
+        <a href="">GHAZIABAD  RESULT CHARTS</a><br>
+        <a href="">GALI  RESULT CHARTS</a><br>
+        <a href="">DESAWAR  RESULT CHARTS</a><br>
+    </div> -->
+</body>
+</html>
