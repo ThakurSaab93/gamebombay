@@ -3,9 +3,12 @@ const router = express();
 const adminModel = require('../models/adminModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const {isLoggedIn} = require('../middlewares/auth')
+const {isLoggedIn} = require('../middlewares/auth');
 router.get('/', isLoggedIn, (req, res)=> {
     res.send('hello admin');
+});
+router.get('/signup',  (req, res)=> {
+    res.render('register');
 });
 router.post('/create', async (req, res)=> {  
     try {
@@ -27,6 +30,10 @@ router.post('/create', async (req, res)=> {
         res.send(error)
     }
 });
+router.get('/login', (req, res)=> {
+    res.render('login');
+});
+
 router.post('/login', async (req, res)=> {
     try {
         const {email, password} = req.body;
