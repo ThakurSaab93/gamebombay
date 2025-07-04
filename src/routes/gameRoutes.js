@@ -13,9 +13,9 @@ router.post("/create", async (req, res) => {
       date: req.body.date,
       bombay_3pm: req.body.bombay_3pm,
       bombay_6pm: req.body.bombay_6pm,
-      bombay_9pm: req.body.bombay_9pm,
+      bombay_9pm: req.body.bombay_9pm,    
       bombay_12am: req.body.bombay_12am,
-      bombay_6am: req.body.bombay_6am,
+      bombay_6am: req.body.bombay_6am
     });
     await gameEntry.save();
     res.redirect('/api/game/read');

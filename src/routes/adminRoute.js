@@ -43,7 +43,7 @@ router.post('/login', async (req, res)=> {
             if(result){
                 const token = jwt.sign({email, id: admin._id}, 'secret');
                 res.cookie('token', token);
-                res.send('valid admin');
+                res.redirect('/api/game/add');
             }else{
                 res.send('wrong password')
             }
