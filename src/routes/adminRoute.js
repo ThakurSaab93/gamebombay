@@ -4,9 +4,7 @@ const adminModel = require('../models/adminModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const {isLoggedIn} = require('../middlewares/auth');
-router.get('/', isLoggedIn, (req, res)=> {
-    res.send('hello admin');
-});
+
 router.get('/signup',  (req, res)=> {
     res.render('register');
 });

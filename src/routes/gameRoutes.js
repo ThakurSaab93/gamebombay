@@ -5,7 +5,7 @@ const {isLoggedIn} = require('../middlewares/auth');
 
 router.get('/add', isLoggedIn, (req, res)=> {
     res.render('add');
-})
+});
 
 router.post("/create", async (req, res) => {
   try {
@@ -25,7 +25,6 @@ router.post("/create", async (req, res) => {
 });
 router.get('/read', async function(req, res, next) {
   const readData = await gameModel.find();
-  console.log(readData);
   res.render('show',{readData});
 });
 router.get('/edit/:id', async (req, res, next)=>{
@@ -34,11 +33,10 @@ router.get('/edit/:id', async (req, res, next)=>{
 });
 router.post('/edit/:id', async (req, res, next)=>{
   const updateData =  await gameModel.findByIdAndUpdate({_id: req.params.id}, req.body);
-  console.log(updateData);
   res.redirect('/api/game/read');
 });
 router.get('/delete/:id', async (req, res)=>{
  const findID = await gameModel.findByIdAndDelete({_id:req.params.id}, req.body);
  res.redirect('/api/game/read');
 });
-module.exports =router;
+module.exports = router;
