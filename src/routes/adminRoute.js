@@ -12,7 +12,6 @@ router.post('/create', async (req, res)=> {
     try {
         const {name, email, password}= req.body;
         const admin = await adminModel.find();
-        console.log(admin.length);
         if(admin.length >= 1) return res.send('not authorized');
         bcrypt.hash(password, 10, async function (err, hash) {
             const createAdmin = await adminModel.create({
