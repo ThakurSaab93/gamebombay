@@ -24,10 +24,19 @@ app.use(cookieParser());
 app.use('/api/game', gameRoute)
 app.use('/api/admin', adminRoute)
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.get('/', async (req, res)=>{
     const readData = await gameModel.find();
     res.render('home', {readData});
-})
+});
+app.get('/robots.txt', (req, res)=> {
+    res.sendFile(path.join(__dirname, "robots.txt"));
+});
+app.get('/sitemap.xml', (req, res)=> {
+    res.sendFile(path.join(__dirname, "sitemap.xml"));
+});
+
 app.listen(port, ()=> {
     console.log('server is running ',port);
-})
+});
